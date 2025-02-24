@@ -1,0 +1,53 @@
+<h2>Usuarios</h2>
+
+<!-- 📝 Formulario para Crear / Editar -->
+<form (ngSubmit)="guardarUsuario()">
+  <input type="text" [(ngModel)]="usuario.nombre" name="nombre" placeholder="Nombre" required />
+  <input type="text" [(ngModel)]="usuario.apellido" name="apellido" placeholder="Apellido" required />
+  <input type="number" [(ngModel)]="usuario.edad" name="edad" placeholder="Edad" required />
+  <input type="email" [(ngModel)]="usuario.email" name="email" placeholder="Email" required />
+  <input type="text" [(ngModel)]="usuario.tipoDocumento" name="tipoDocumento" placeholder="Tipo de Documento" required />
+  <input type="file" [(ngModel)]="usuario.foto" name="foto" placeholder="Foto" />
+
+  <button type="submit" class="btn btn-primary">
+    {{ usuario.id ? 'Actualizar' : 'Crear' }}
+  </button>
+</form>
+
+<!-- 🔍 Búsqueda -->
+<input type="text" [(ngModel)]="terminoBusqueda" (input)="buscarUsuarios()" placeholder="Buscar usuario..." />
+
+<!-- 📋 Lista de Usuarios -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Email</th>
+      <th>Foto</th>
+      <th>Tipo de Documento</th>
+      <th>Rol</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.apellido }}</td>
+      <td>{{ usuario.edad }}</td>
+      <td>{{ usuario.email }}</td>
+      <td><img [src]="usuario.foto" alt="Foto" width="50"></td>
+      <td>{{ usuario.tipoDocumento }}</td>
+      <td>{{ usuario.rol?.nombre }}</td>
+      <td>
+        <button class="btn btn-warning" (click)="editarUsuario(usuario)">Editar</button>
+        <button class="btn btn-danger" (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="paginaAnterior()" [disabled]="paginaActual === 0">Anterior</button>
+<button (click)="siguientePagina()" [disabled]="paginaActual >= totalPaginas - 1">Siguiente</button>

@@ -1,0 +1,33 @@
+/* Estilo para el formulario de búsqueda */
+.busqueda-form {
+    display: flex; /* Utiliza flexbox para el diseño del formulario */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 10px; /* Espacio entre los elementos del formulario */
+    margin-bottom: 20px; /* Margen inferior del formulario */
+}
+
+/* Estilo para el campo de entrada del formulario de búsqueda */
+.busqueda-form input {
+    width: 250px; /* Ancho del campo de entrada */
+    padding: 10px; /* Espaciado interno del campo de entrada */
+    border: 2px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 5px; /* Bordes redondeados del campo de entrada */
+}
+
+/* Estilo para el botón del formulario de búsqueda */
+.busqueda-form button {
+    background-color: #d5c2b4; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de la fuente del texto del botón */
+    color: white; /* Color del texto del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    transition: background 0.3s; /* Transición suave para el cambio de fondo */
+}
+
+/* Estilo para el botón del formulario de búsqueda al pasar el cursor */
+.busqueda-form button:hover {
+    background-color: #d79a2b; /* Color de fondo del botón al pasar el cursor */
+}

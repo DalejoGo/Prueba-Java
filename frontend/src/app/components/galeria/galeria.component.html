@@ -1,0 +1,24 @@
+<div class="galeria">
+    <!-- Itera sobre el array de imágenes y crea una tarjeta para cada imagen -->
+    <div *ngFor="let imagen of imagenes" class="imagen-card" (click)="abrirModal(imagen)">
+      <!-- Muestra la imagen con su URL de vista previa y sus etiquetas como texto alternativo -->
+      <img [src]="imagen.previewURL" [alt]="imagen.tags" />
+    </div>
+</div>
+  
+<!-- Modal de Imagen -->
+<div *ngIf="imagenSeleccionada" class="modal" (click)="cerrarModal()">
+    <!-- Contenido del modal -->
+    <div class="modal-contenido" (click)="$event.stopPropagation()">
+      <!-- Botón para cerrar el modal -->
+      <span class="cerrar" (click)="cerrarModal()">&times;</span>
+      <!-- Muestra la imagen seleccionada con su URL de formato web y sus etiquetas como texto alternativo -->
+      <img [src]="imagenSeleccionada.webformatURL" [alt]="imagenSeleccionada.tags" />
+      <!-- Muestra las etiquetas de la imagen -->
+      <p><strong>Tags:</strong> {{ imagenSeleccionada.tags }}</p>
+      <!-- Muestra el número de vistas de la imagen -->
+      <p><strong>Vistas:</strong> {{ imagenSeleccionada.views }}</p>
+      <!-- Muestra el número de likes de la imagen -->
+      <p><strong>Likes:</strong> {{ imagenSeleccionada.likes }}</p>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+/* Estilos generales */
+h2 {
+    text-align: center; /* Centra el texto */
+    color: #041e42; /* Azul DataVision */
+}
+
+/* 📌 Estilos para el formulario */
+form {
+    display: flex; /* Utiliza flexbox para el diseño del formulario */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    gap: 10px; /* Espacio entre los elementos del formulario */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    background-color: #f8f2ee; /* Color de fondo del formulario */
+    padding: 20px; /* Espaciado interno del formulario */
+    border-radius: 10px; /* Bordes redondeados del formulario */
+    box-shadow: 0px 0px 10px rgba(251, 251, 251, 0.1); /* Sombra del formulario */
+    margin-bottom: 20px; /* Margen inferior del formulario */
+}
+
+input {
+    padding: 10px; /* Espaciado interno del campo de entrada */
+    border: 1px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 5px; /* Bordes redondeados del campo de entrada */
+    width: 100%; /* Ancho completo del campo de entrada */
+    max-width: 300px; /* Ancho máximo del campo de entrada */
+}
+
+/* 📌 Estilos para botones */
+button {
+    padding: 10px 15px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 14px; /* Tamaño de la fuente del texto del botón */
+    color: white; /* Color del texto del botón */
+}
+
+.btn-primary {
+    background-color: #d5c2b4; /* Azul DataVision */
+    color: white; /* Color del texto del botón */
+}
+
+.btn-primary:hover {
+    background-color: #d79a2b; /* Dorado DataVision */
+}
+
+/* 📌 Estilos para la tabla de usuarios */
+.table {
+    width: 100%; /* Ancho completo de la tabla */
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+    margin-top: 10px; /* Margen superior de la tabla */
+}
+
+.table th, .table td {
+    padding: 10px; /* Espaciado interno de las celdas */
+    text-align: center; /* Centra el texto en las celdas */
+    border: 1px solid #ddd; /* Borde de las celdas */
+}
+
+.table th {
+    background-color: #d5c2b4; /* Color de fondo de las celdas de encabezado */
+    color: white; /* Color del texto de las celdas de encabezado */
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; /* Color de fondo de las filas al pasar el cursor */
+}
+
+/* 📌 Estilos para la imagen */
+.table img {
+    border-radius: 50%; /* Bordes redondeados de la imagen */
+    width: 40px; /* Ancho de la imagen */
+    height: 40px; /* Altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+/* 📌 Controles de paginación */
+button[disabled] {
+    background-color: #ccc; /* Color de fondo del botón deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor al pasar sobre el botón deshabilitado */
+}
+
+.pagination {
+    display: flex; /* Utiliza flexbox para el diseño de la paginación */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los elementos de la paginación */
+    margin-top: 20px; /* Margen superior de la paginación */
+}

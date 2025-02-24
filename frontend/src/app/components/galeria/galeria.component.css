@@ -1,0 +1,83 @@
+/* Estilos generales de la galería */
+.galeria {
+  display: flex; /* Utiliza flexbox para el diseño de la galería */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+  gap: 15px; /* Espacio entre los elementos de la galería */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  padding: 20px; /* Espaciado interno de la galería */
+  background-color: #f8f2ee; /* Color de fondo de la galería */
+}
+
+.imagen-card {
+  background: #f8f2ee; /* Color de fondo de la tarjeta de imagen */
+  border-radius: 10px; /* Bordes redondeados de la tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para transformaciones y sombras */
+}
+
+.imagen-card img {
+  width: 180px; /* Ancho de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+  display: block; /* Muestra la imagen como un bloque */
+  transition: transform 0.3s; /* Transición suave para transformaciones */
+}
+
+.imagen-card:hover {
+  transform: translateY(-5px); /* Mueve la tarjeta hacia arriba al pasar el cursor */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el cursor */
+}
+
+.imagen-card img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
+
+/* Modal */
+.modal {
+  display: flex; /* Utiliza flexbox para el diseño del modal */
+  position: fixed; /* Posiciona el modal de forma fija */
+  top: 0; /* Posiciona el modal en la parte superior */
+  left: 0; /* Posiciona el modal en la parte izquierda */
+  width: 100%; /* Ancho completo del modal */
+  height: 100%; /* Altura completa del modal */
+  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+.modal-contenido {
+  background: white; /* Fondo blanco del contenido del modal */
+  padding: 20px; /* Espaciado interno del contenido del modal */
+  border-radius: 10px; /* Bordes redondeados del contenido del modal */
+  text-align: center; /* Alinea el texto al centro */
+  max-width: 500px; /* Ancho máximo del contenido del modal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del contenido del modal */
+}
+
+.modal img {
+  width: 100%; /* Ancho completo de la imagen */
+  max-width: 400px; /* Ancho máximo de la imagen */
+  border-radius: 5px; /* Bordes redondeados de la imagen */
+}
+
+.cerrar {
+  position: absolute; /* Posiciona el botón de cerrar de forma absoluta */
+  top: 15px; /* Posiciona el botón de cerrar en la parte superior */
+  right: 20px; /* Posiciona el botón de cerrar en la parte derecha */
+  font-size: 30px; /* Tamaño de la fuente del botón de cerrar */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón de cerrar */
+  color: #fff; /* Color del botón de cerrar */
+  transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.cerrar:hover {
+  color: #d79a2b; /* Cambia el color del botón de cerrar al pasar el cursor */
+}
+
+/* Estilos para la información en el modal */
+.modal p {
+  color: #041e42; /* Color del texto en el modal */
+  font-size: 16px; /* Tamaño de la fuente del texto en el modal */
+}
